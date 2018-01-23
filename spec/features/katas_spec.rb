@@ -3,7 +3,25 @@ require 'capybara'
 
 describe 'Kata' do
 
+
+  it 'can be created' do
+
+    kata_title = 'my kata title'
+    kata_description = 'my kata description'
+
+    visit root_path
+    click_on('New Kata')
+    fill_in(:title, with: kata_title)
+    fill_in(:description, with: kata_description)
+    click_on('Save')
+
+    expect(page).to have_content(kata_title)
+    expect(page).to have_content(kata_description)
+
+  end
+
   it 'all are shown when selected' do
+
     first_kata_title = 'first kata title'
     first_kata_description = 'first kata description'
     second_kata_title = 'second kata title'
@@ -23,6 +41,7 @@ describe 'Kata' do
 
     expect(page).to have_content(second_kata_title)
     expect(page).to have_content(second_kata_description)
+
   end
 
   def create_kata(title: 'Kata title', description: 'Kata description')

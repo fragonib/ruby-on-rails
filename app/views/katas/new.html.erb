@@ -1,0 +1,9 @@
+<h1>New kata</h1>
+
+<div>
+<%= form_tag(create_kata_path) do %>
+  <%= text_field_tag 'title' %>
+  <%= text_field_tag 'description' %>
+  <%= submit_tag %>
+<% end %>
+</div>
