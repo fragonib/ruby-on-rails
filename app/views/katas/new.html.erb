@@ -2,8 +2,12 @@
 
 <div>
 <%= form_tag(create_kata_path) do %>
+<fieldset>
+  <label for="title">Title</label>
   <%= text_field_tag 'title' %>
+  <label for="description">Description</label>
   <%= text_field_tag 'description' %>
-  <%= submit_tag %>
+</fieldset>
+<%= submit_tag %>
 <% end %>
 </div>
