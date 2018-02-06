@@ -29,19 +29,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-
+es:
+  
   edit:
-    title: 'Edit Kata'
+    title: 'Editar kata'
     kata:
-      title: 'Title'
-      description: 'Description'
+      title: 'Título'
+      description: 'Descripción'
     actions:
-      save: 'Save'
-      
+      save: 'Guardar'
+
   list:
-    title: 'Kata list'
+    title: 'Lista de Katas'
     actions:
-      new: 'New'
-      edit: 'Edit'
-      delete: 'Delete'
+      new: 'Nueva'
+      edit: 'Editar'
+      delete: 'Borrar'

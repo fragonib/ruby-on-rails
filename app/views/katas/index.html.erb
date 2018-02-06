@@ -1,14 +1,14 @@
-<h1>Katas list</h1>
-
-<div>
-  <%= link_to('New Kata', new_kata_path) %>
-</div
+<h1><%= t('list.title') %></h1>
 
 <ul>
 <% @katas.each do |kata| %>
-  <li><%= link_to(kata.title, kata_path(kata.id)) %>
-    - <%= link_to('Edit', edit_kata_path(kata.id)) %>
-    <%= link_to('Delete', delete_kata_path(kata.id), method: 'delete') %>
+  <li><%= show_kata_link(kata.title, kata.id) %>
+    - <%= edit_kata_link(t('list.action.edit'), kata.id) %>
+    <%= delete_kata_link(t('list.action.delete'), kata.id) %>
   </li>
 <% end %>
 </ul>
+
+<div>
+  <%= link_to(t('list.actions.new'), new_kata_path) %>
+</div

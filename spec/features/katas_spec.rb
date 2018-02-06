@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'capybara'
 
-describe 'Kata' do
+describe 'Kata E2E' do
 
   it 'all are shown when selected' do
 
@@ -33,7 +33,7 @@ describe 'Kata' do
     kata_description = 'my kata description'
 
     visit root_path
-    click_on('New Kata')
+    click_on('New')
     fill_in(:title, with: kata_title)
     fill_in(:description, with: kata_description)
     click_on('Save')
